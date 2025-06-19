@@ -1,0 +1,109 @@
+ion-content {
+  .bg_circle {
+    position: absolute;
+    width: 33vh;
+    height: 33vh;
+    left: -8rem;
+    top: 4vh;
+    border-radius: 50%;
+
+    background: #e8069d;
+    background: linear-gradient(270deg, #e8069d, #085cd2);
+  }
+  .bg_circle_right {
+    position: absolute;
+    width: 33vh;
+    height: 33vh;
+    right: -8rem;
+    top: 10vh;
+    border-radius: 50%;
+
+    background: #4493cc;
+    background: linear-gradient(270deg, #4493cc, #68e845);
+  }
+
+  ion-card {
+    height: 29vh;
+    margin-top: 8vh;
+    border-radius: 1.1rem;
+    padding: 0.7rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(127, 212, 168, 0.2);
+  }
+
+  .bank-img {
+    background: url(../../../../assets/images/axisbank.png);
+    width: 27vw;
+    height: 10vh;
+    display: inline-block;
+    transform: translate(180%, -145%);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .debit {
+    font-size: 1rem;
+    color: white;
+  }
+  .card-n {
+    margin-top: 2.5rem;
+    font-size: 1.7rem;
+    color: white;
+  }
+  .cvv {
+    p {
+      font-size: 1rem;
+    }
+
+    transform: translate(0%, -140%);
+    color: white;
+  }
+  .exp {
+    p {
+      font-size: 1rem;
+    }
+    transform: translate(20%, -245%);
+    color: white;
+  }
+
+  .visa-img {
+    background: url(/assets/images/visa.png);
+    width: 24vw;
+    height: 10vh;
+    display: inline-block;
+    transform: translate(230%, -215%);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  ion-list {
+    ion-item {
+      ion-label {
+        font-size: 1.2rem !important;
+      }
+    }
+  }
+
+  ion-list.transactions {
+    margin-top: 10vh;
+    border-radius: 5vh 5vh 0 0;
+    background: var(--ion-color-secondary);
+    padding-bottom: 10vh;
+    ion-list-header {
+      padding-inline-start: 3.5vh;
+      padding-top: 1.1vh;
+      margin-bottom: 1.9vh;
+    }
+
+    ion-item-group {
+      padding: 0 3.5vh;
+      ion-item {
+        font-weight: bold;
+        --background: transparent;
+        --border-style: none;
+        --padding-bottom: 0.8rem;
+        --padding-top: 1rem;
+        --padding-start: 0;
+      }
+    }
+  }
+}

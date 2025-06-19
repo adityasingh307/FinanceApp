@@ -1,0 +1,119 @@
+.md {
+  ion-segment {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+ion-header {
+  ion-toolbar {
+    --background: var(--ion-color-secondary);
+    ion-segment {
+      --background: var(--ion-color-primary);
+      ion-segment-button {
+        --color: var(--ion-color-white);
+        --color-checked: var(--ion-color-primary);
+      }
+    }
+  }
+}
+
+ion-content {
+  ion-list {
+    margin-top: 4rem;
+  }
+  --background: var(--ion-color-secondary);
+}
+
+ion-list.transactions {
+  background: var(--ion-color-secondary);
+
+  ion-list-header,
+  ion-item {
+    ion-label {
+      font-size: 1.3rem;
+    }
+  }
+
+  ion-item-group {
+    padding: 0 3.5vh;
+    ion-item {
+      font-weight: bold;
+      --background: transparent;
+      --border-style: dashed;
+      --border-color: var(--ion-color-tertiary);
+      --padding-bottom: 1rem;
+      --padding-top: 1rem;
+      --padding-start: 0;
+      ion-text[slot="end"] {
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 0.9rem;
+        font-weight: normal;
+        margin-top: 3px;
+      }
+      ion-thumbnail {
+        height: 6vh;
+        width: 6vh;
+        border-radius: 10px;
+
+        img {
+          height: 4vh;
+          width: 4vh;
+          transform: translateY(25%);
+        }
+      }
+    }
+  }
+}
+
+.upi-id {
+  font-size: 1.1rem;
+  background-color: white;
+  height: 2.4rem;
+  width: 65vw;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 3vh;
+}
+
+.acc-no {
+  font-size: 1.1rem;
+  background-color: white;
+  height: 2.4rem;
+  width: 74vw;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 8vh;
+}
+
+.ifsc {
+  font-size: 1.1rem;
+  background-color: white;
+  height: 2.4rem;
+  width: 50vw;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 3vh;
+}
+
+span {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}

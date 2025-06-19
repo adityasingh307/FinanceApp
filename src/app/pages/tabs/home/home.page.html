@@ -1,0 +1,110 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title mode="md" class="ion-no-padding">
+      <ion-label>
+        <ion-text color="tertiary">Welcome</ion-text>
+        <p>
+          <ion-text color="white"><strong>Bhupendra Jogi.</strong></ion-text>
+        </p>
+      </ion-label>
+    </ion-title>
+    <ion-avatar slot="end">
+      <img src="assets/images/bj-img.jpg" />
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+  <ion-card
+    ><ion-card-header>
+      <ion-card-title>Total Balance</ion-card-title>
+      <ion-card-subtitle>Savings Account</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="totalB">₹ {{totalBalance}}</div>
+      <div class="bank-img"></div> </ion-card-content
+  ></ion-card>
+
+  <div class="upi-id">UPI ID: bhupendrajogi@okaxis</div>
+
+  <ion-grid>
+    <ion-row class="feature">
+      <ion-col
+        ><ion-button
+          ><div class="img-holder">
+            <div class="img1"></div>
+            <div class="feature-text">Scan QR</div>
+          </div></ion-button
+        >
+      </ion-col>
+      <ion-col>
+        <ion-button
+          ><div class="img-holder">
+            <div class="img2"></div>
+            <div class="feature-text">Pay Contacts</div>
+          </div>
+        </ion-button></ion-col
+      >
+      <ion-col>
+        <ion-button
+          ><div class="img-holder">
+            <div class="img6"></div>
+            <div class="feature-text">Wallets</div>
+          </div></ion-button
+        >
+      </ion-col>
+    </ion-row>
+    <ion-row class="feature">
+      <ion-col>
+        <ion-button>
+          <div class="img-holder">
+            <div class="img4"></div>
+            <div class="feature-text">Recharge</div>
+          </div>
+        </ion-button></ion-col
+      ><ion-col>
+        <ion-button
+          ><div class="img-holder">
+            <div class="img5"></div>
+            <div class="feature-text">Pay Bills</div>
+          </div></ion-button
+        > </ion-col
+      ><ion-col>
+        <ion-button
+          ><div class="img-holder">
+            <div class="img3"></div>
+            <div class="feature-text">Bank Xfer</div>
+          </div></ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list class="transactions" *ngIf="transactions.length > 0">
+    <ion-list-header>
+      <ion-label color="medium">Last 5 Transactions</ion-label>
+    </ion-list-header>
+    <ion-item-group>
+      <ion-item
+        lines="full"
+        *ngFor="let transaction of transactions.slice(0,5)"
+      >
+        <ion-thumbnail slot="start" class="ion-text-center">
+          <img
+            [src]="'assets/images/' + (transaction.amount >= 0 ? 'downLeft.png' : 'topRight.png')"
+          />
+        </ion-thumbnail>
+        <ion-label>
+          <ion-text color="primary">{{transaction.to}}</ion-text>
+          <p>
+            <ion-text> {{transaction.date | date: 'MMM d, y'}} </ion-text>
+          </p>
+        </ion-label>
+        <ion-text slot="end" color="primary">
+          {{transaction.amount >= 0 ? '+ ₹' + transaction.amount : '- ₹' +
+          (transaction.amount * (-1))}}
+        </ion-text>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+</ion-content>

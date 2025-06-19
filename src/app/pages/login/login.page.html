@@ -1,0 +1,47 @@
+<ion-content>
+  <div class="bank-logo"></div>
+  <div class="form-container">
+    <form class="ion-margin">
+      <div class="ion-margin-vertical">
+        <ion-item lines="full">
+          <ion-input
+            type="text"
+            placeholder="Enter email or username"
+          ></ion-input>
+        </ion-item>
+      </div>
+      <div class="ion-margin-vertical">
+        <ion-item lines="full">
+          <ion-input type="password" placeholder="Enter password"></ion-input>
+        </ion-item>
+        <ion-text color="danger"> </ion-text>
+      </div>
+    </form>
+    <p class="ion-text-right ion-margin-horizontal">
+      <ion-text color="medium">Forgot password?</ion-text>
+    </p>
+
+    <div class="ion-margin-horizontal">
+      <ion-button
+        class="ion-margin-horizontal"
+        size="large"
+        expand="block"
+        shape="round"
+        color="primary"
+        [routerLink]="['/tabs']"
+      >
+        <ion-text>Log In</ion-text>
+      </ion-button>
+    </div>
+
+    <p class="ion-text-center">
+      <ion-text color="medium">OR</ion-text>
+    </p>
+
+    <p class="ion-text-center">
+      <ion-icon name="logo-facebook" style="color: blue"></ion-icon>
+      <ion-icon name="logo-twitter" style="color: #00acee"></ion-icon>
+      <ion-icon name="logo-google" style="color: red"></ion-icon>
+    </p>
+  </div>
+</ion-content>

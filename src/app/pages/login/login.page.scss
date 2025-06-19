@@ -1,0 +1,44 @@
+ion-input,
+ion-text {
+  font-size: 1.1rem;
+  background: transparent;
+}
+
+ion-content {
+  --background: #e8f0f0;
+}
+
+ion-item {
+  --background: transparent;
+  --color: #1f0318;
+}
+
+p {
+  ion-icon {
+    font-size: 2rem;
+    margin: 1vh 2vh;
+  }
+}
+ion-button {
+  margin: 5vh 0;
+  width: 80%;
+  transform: translateX(12%);
+  ion-text {
+    font-size: 1.2rem;
+  }
+}
+
+.form-container {
+  transform: translate(0%, 30%);
+}
+
+.bank-logo {
+  background-image: url(../../../assets/images/bankLogo.png);
+  height: 25vh;
+  width: 70vw;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0;
+  transform: translate(20%, 25%);
+}

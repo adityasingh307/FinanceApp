@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border" translucent>
+  <ion-toolbar>
+    <ion-title color="primary">Account Summary</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="transactions">
+    <ion-item-group>
+      <ion-item lines="full">
+        <ion-label> Total Balance </ion-label>
+
+        <ion-text slot="end" color="primary">₹ {{totalBalance}}</ion-text>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label>Spent this year</ion-label>
+        <ion-text slot="end" color="primary">₹ {{spents}}</ion-text>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label>Received this year</ion-label>
+
+        <ion-text slot="end" color="primary">₹ {{receive}}</ion-text>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label>Invested this year</ion-label>
+        <ion-text slot="end" color="primary">₹ 0</ion-text>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+  <div class="acc-no"><span>Account No.</span> 5556 0101 1089 77</div>
+  <div class="ifsc"><span>IFSC </span> FDRL0005556</div>
+  <div class="upi-id"><span>UPI </span> bhupendrajogi@okaxis</div>
+</ion-content>
